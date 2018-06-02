@@ -1,0 +1,82 @@
+.lui-input
+  color #000
+  display inline-block
+  font-size 18px
+  font-weight bold
+  margin 20px
+  max-width 350px
+  position relative
+  vertical-align top
+  width calc(100% - 2em)
+  z-index 1
+  input
+    appearance none
+    background transparent
+    border-radius 0
+    border none
+    color #000
+    display block
+    float right
+    font-size 18px
+    font-weight bold
+    padding 20px
+    position relative
+    width 100%
+    &:focus
+      outline none
+  label
+    -moz-osx-font-smoothing grayscale
+    -webkit-font-smoothing antialiased
+    -webkit-touch-callout none
+    cursor text
+    display inline-block
+    float right
+    height 100%
+    padding 0 20px
+    position absolute
+    text-align left
+    user-select none
+    width 100%
+    span
+      transform-origin: 0% 50%;
+      transition: transform 0.3s;
+      position: relative
+      display block
+      padding 1.6em 0
+      width 100%
+    svg
+      transform scale3d(1, -1, 1)
+      transition stroke-dashoffset 0.3s
+      pointer-events none
+      stroke #000
+      stroke-width 4px
+      stroke-dasharray 962
+      stroke-dashoffset 558
+      position absolute
+      top 0
+      left 0
+      fill none
+
+  &[data-color='black']
+    color #000
+    input
+      color #000
+     label svg
+      stroke #000
+   
+  &[data-color='white']
+    color #fff
+    input
+      color #fff
+    label svg
+      stroke #fff
+
+  &:focus + label, &[data-filled='true'] label
+    cursor default
+    pointer-events none
+
+  &:focus + label svg, &[data-filled='true'] label svg
+    stroke-dashoffset 0
+
+  &:focus + label span, &[data-filled='true'] label span
+    transform scale3d(0.8, 0.8, 1) translate3d(0, 3em, 0)

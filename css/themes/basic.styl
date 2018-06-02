@@ -1,0 +1,101 @@
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,700,900')
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro')
+
+// common styles
+@import '../base.css'
+
+// customization for themes
+body
+  text-align center
+
+h1, h2, h3, h4
+  font-family Lato
+
+h1, h2
+  color $black
+  font-family Lato
+  font-size 2em
+  font-weight 900
+  letter-spacing 0.1em
+  line-height 1.25
+  text-transform uppercase
+  max-width: 48rem;
+  a
+    color $black
+h2
+  font-size 1.5em
+h3
+  font-size 1.3em
+
+.center
+  text-align center
+
+p
+  color rgba(0, 0, 0, 0.5)
+  font-family source-sans-pro,sans-serif
+  font-size 1.1rem
+  font-weight 400
+  letter-spacing .1em
+  line-height 1.5
+  margin 1rem auto 2rem
+  max-width 48rem
+
+hr
+  margin 60px 0 50px
+
+.section
+  background #f7f7f9
+  padding: 3rem 0px;
+  &:nth-child(odd)
+    background #fff
+  h1, h2
+    margin 0 auto
+  .inner
+    max-width: 72rem;
+    margin: 0px auto;
+
+    .icon
+      padding 20px
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url
+  background transparent
+
+button
+  background-color rgb(95, 87, 173)
+  border-color rgb(95, 87, 173)
+  border-style solid
+  border-width 1px
+  color rgb(255, 255, 255)
+  cursor pointer
+  display inline-block
+  font-family source-sans-pro, sans-serif
+  font-size 0.875rem
+  font-weight 400
+  letter-spacing 0.1em
+  margin 1rem 0.75rem
+  padding .8rem 1.5rem
+  position relative
+  text-transform uppercase
+  top 0
+  &:hover
+    background darken(rgb(95, 87, 173), 5)
+
+.half
+  width 50%
+  display inline-block
+  vertical-align top
+
+.content
+  box-sizing border-box
+  margin-left 260px
+  max-width 90%
+  padding 20px
+  text-align left
+  width 800px
+  .divider
+    background rgba(0, 0, 0, .6)
+    height 1px
+    margin 80px 0
+    width 100%
